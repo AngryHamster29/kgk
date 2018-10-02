@@ -1,11 +1,7 @@
 import java.util.Random;
 import java.util.Scanner;
-
 public class Main {
-
     public static void main(String[] arqs) {
-
-
         boolean oj;
         boolean ataka;
         boolean shild;
@@ -13,17 +9,13 @@ public class Main {
         int player = 200;
         int zel = 4;
         Scanner scan = new Scanner(System.in);
-
         Random random = new Random();
-
-
         System.out.println("Битва с драконом");
         System.out.println("У вас три действия:1-атака 2-закрыться шитоом 3-выпить зелье(их всего 4)");
         System.out.println("Битва начинается!");
         while (dragon > 0) {
             System.out.println("Ваш Ход, выберите действие");
             int number = scan.nextInt();
-
             if (number == 1) {
                 ataka = random.nextBoolean();
                 if (ataka == true) {
@@ -51,10 +43,7 @@ public class Main {
                     player = player - (1 + ((int) (Math.random() * 60))/2);
                     System.out.println("Вы частично заблокировали удар");
                     System.out.println("Ваш уровень здоровья:" + player);
-
                 }
-
-
             } else {
                 player = player - (1 + ((int) (Math.random() * 60)));
                 System.out.println("Ваш уровень здоровья:" + player);
@@ -62,9 +51,6 @@ public class Main {
             if (player < 0) {
                 break;
             }
-
-
-
         }
         System.out.println("Игра Окончена!");
     }
